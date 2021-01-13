@@ -19,7 +19,6 @@ locals {
   image_list = flatten([
     for pid in range(length(var.partitions)) : [{
       name           = "${local.compute_node_prefix}-${pid}-image"
-      #boot_image          = var.compute_image
       boot_image     = var.partitions[pid].compute_image
       boot_disk_size = var.compute_image_disk_size_gb
       boot_disk_type = var.compute_image_disk_type
@@ -40,7 +39,6 @@ locals {
     for pid in range(length(var.partitions)) : [
       for n in range(var.partitions[pid].static_node_count) : {
         name           = "${local.compute_node_prefix}-${pid}-${n}"
-        #boot_image     = var.partitions[pid].compute_image
         boot_disk_size = var.partitions[pid].compute_disk_size_gb
         boot_disk_type = var.partitions[pid].compute_disk_type
         labels         = var.partitions[pid].compute_labels
@@ -78,7 +76,6 @@ resource "google_compute_instance" "compute_node" {
 
   boot_disk {
     initialize_params {
-      #image = "centos-cloud/centos-7"
       image = each.value.boot_image
       type  = each.value.boot_disk_type
       size  = each.value.boot_disk_size

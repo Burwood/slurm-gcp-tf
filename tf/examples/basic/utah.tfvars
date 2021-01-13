@@ -87,7 +87,6 @@ partitions = [
     max_node_count       = 10
     zone                 = "us-central1-a"
     compute_image        = "slurm-mp-cloud/partition1"
-    #compute_image        = "projects/centos-cloud/global/images/centos-7-v20201216"
     compute_disk_type    = "pd-standard"
     compute_disk_size_gb = 20
     compute_labels       = {}
@@ -110,7 +109,7 @@ partitions = [
       key1 = "val1"
       key2 = "val2"
     }
-    cpu_platform         = "Intel Skylake"
+    cpu_platform         = null
     gpu_count            = 0
     gpu_type             = null
     network_storage      = []
