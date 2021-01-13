@@ -4,7 +4,7 @@
 
 * Navigate to tf/examples/basic
 * Create compute instance based on Centos7 Image.  Install Intel MPI and other libraries.
-* Create compute instance.  On Image define image family.  Write down the image family name.
+* [Create compute image](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images).  On Image define image family.  Write down the image family name.
 * Open utath.tfvars
 * Edit
 	* line 2 for project with your project ID
