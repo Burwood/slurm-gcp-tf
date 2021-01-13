@@ -2,11 +2,11 @@
 
 ## Instructions to run on modified version
 
-*Navigate to tf/examples/basic
-*Create compute instance based on Centos7 Image.  Install Intel MPI and other libraries.
-*Create compute instance.  On Image define image family.  Write down the image family name.
-*Open utath.tfvars
-*Edit
+* Navigate to tf/examples/basic
+* Create compute instance based on Centos7 Image.  Install Intel MPI and other libraries.
+* Create compute instance.  On Image define image family.  Write down the image family name.
+* Open utath.tfvars
+* Edit
 	* line 2 for project with your project ID
 	*line 83.  Edit settings for instance type, disk type. For compute image set to {project-id}/{image-family}.  Image family comes from a previous step
 	*Create as many partitions blocks as needed for types of compute nodes
