@@ -1011,7 +1011,7 @@ def setup_nss_slurm():
 def main():
     hostname = socket.gethostname()
 
-    setup_selinux()
+    #setup_selinux()
 
     start_motd()
 
